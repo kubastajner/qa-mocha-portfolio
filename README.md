@@ -1,6 +1,6 @@
 # Testování API s Supertest a Chai
 
-Этиот projekt obsahuje jednoduché testy pro ověření API pomocí **Supertest** a **Chai**. Testy zahrnují autentifikaci uživatele a validaci JSON dat z externího API.
+Tento projekt obsahuje jednoduché testy pro ověření API pomocí **Supertest** a **Chai**. Testy zahrnují autentifikaci uživatele a validaci JSON dat z externího API.
 
 ---
 
