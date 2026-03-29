@@ -3,30 +3,16 @@
 // ========================================
 
 module.exports = {
-  // API URL
-  BASE_URL: "https://httpbin.org",
+  // API URLs
   httpbin: "https://httpbin.org",
+  cryptoWallet: "https://crypto-wallet-server.mock.beeceptor.com",
 
-  // Autentifikační údaje
-  AUTH: {
-    username: "admin",
-    password: "passwd",
-    wrong_password: "wrongpasswd"
-  },
+  // Credentials #1
+  userName: "user123",
+  email: "user@example.com",
+  password: "securepassword",
 
   // Timeout
   TIMEOUT: 5000,
 
-  // Testovací data
-  TEST_DATA: {
-    name: "Jiří",
-    email: "jiri@example.com",
-    age: 30
-  },
-
-  // Očekávané hodnoty
-  EXPECTED: {
-    json_author: "Yours Truly",
-    json_title: "Sample Slide Show"
-  }
 };

@@ -2,18 +2,16 @@ const request = require('supertest');
 const chai = require('chai');
 const expect = chai.expect;
 const endpoints = require('./endpoints');
+const config = require('../../config/config');
 
-const baseURL = 'https://crypto-wallet-server.mock.beeceptor.com';
+// Dotáhni vše z configu na začátku
+const { userName, email, password, cryptoWallet } = config;
+const baseURL = cryptoWallet;
 
 describe("Testování Crypto Wallet API", () => {
 
   // 1. REGISTRACE - Vytvořit uživatele a peněženku
   it("1. POST - Registrace nového uživatele", async () => {
-
-    userName = "user123";
-    email = "user@example.com";
-    password = "securepassword";
-
 
     const res = await request(baseURL)
       .post(endpoints.register.path)
