@@ -43,7 +43,7 @@ Testy běží **v pořadí** a na sobě závisejí:
 
 ## 📖 Dokumentace Endpointů
 
-**Detailn dokumentace všech endpointů včetně request/response příkladů najdeš v souboru:**
+**Detailní dokumentace všech endpointů včetně request/response příkladů najdeš v souboru:**
 
 👉 **[`endpoints.js`](endpoints.js)**
 
@@ -51,25 +51,10 @@ Tam máš všechno - metody, cesty, parametry, expected responses, atd.
 
 ---
 
-## 🛠️ Jak to Funguje
-
-### endpoint.js
-Centralizovaná definice všech endpointů. Importován v `crypto_wallet.js`:
-```javascript
-const endpoints = require('./endpoints');
-.post(endpoints.register.path)
-```
-
-### crypto_wallet.js
-Mocha testovací suite - spustit pomocí `npm test`.
-
----
-
 ## 📌 Poznámky
 
 - Mock server: `https://crypto-wallet-server.mock.beeceptor.com`
 - Přihlašovací údaje jsou hardcodované (mock testing)
-- Testy vygenerují náhodné `userName` v testu 1
 - Všechny responses jsou logované pro debugging
 
 ---

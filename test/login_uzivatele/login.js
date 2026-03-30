@@ -1,12 +1,13 @@
 const request = require('supertest');
 const chai = require('chai');
+const { httpbin } = require('../../config/config');
 const expect = chai.expect;
 
 
 describe("Přihlášení uživatelů", () => {
 
   it("správný uživatel", async () => {
-    const res = await request("https://httpbin.org")
+    const res = await request(httpbin)
       .get("/basic-auth/admin/passwd")
       .auth("admin", "passwd"); // 🔐 TADY posíláš login
 
@@ -20,7 +21,7 @@ describe("Přihlášení uživatelů", () => {
 
 
   it("NEsprávný uživatel", async () => {
-    const res = await request("https://httpbin.org")
+    const res = await request(httpbin)
       .get("/basic-auth/admin/passwd")
       .auth(uzivatel, "wrongpasswd"); // 🔐 TADY posíláš login
 
@@ -28,7 +29,7 @@ describe("Přihlášení uživatelů", () => {
   });
 
   it("volání JSONu", async () => {
-    const res = await request("https://httpbin.org")
+    const res = await request(httpbin)
       .get("/json")
 
     expect(res.status).to.equal(200);

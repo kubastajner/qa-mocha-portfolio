@@ -1,10 +1,14 @@
 # 🧪 API Testing Suite
 
-Kompletní testovací suite s **Mocha**, **Chai** a **Supertest**. Obsahuje dva oddělené testovací projekty.
+Tento repozitář slouží jako ukázka mé práce s automatizovaným testováním v Mocha.
+Obsahuje příklady struktury testů, asercí a základních principů QA automatizace v JavaScriptu.
 
+Cílem projektu je prezentovat přehledný, udržitelný a praktický přístup k psaní automatizovaných testů.
+
+Testovací suite s **Mocha**, **Chai** a **Supertest**. Obsahuje dva oddělené testovací projekty.
 ---
 
-## � Instalace & Spuštění
+## ⚙️ Instalace & Spuštění
 
 ### Požadavky:
 - **Node.js** >= 14
@@ -44,7 +48,6 @@ mocha/
 ├── test/
 │   ├── login_uzivatele/
 │   │   ├── login.js                # Testy pro přihlášení
-│   │   └── ...
 │   └── crypto/
 │       ├── crypto_wallet.js         # Testy pro Crypto Wallet API (7 testů)
 │       ├── endpoints.js             # Definice endpointů
@@ -56,7 +59,7 @@ mocha/
 
 ---
 
-## � Projekty
+## 🗂️ Projekty
 
 ### 1️⃣ **Login Uživatele** – `test/login_uzivatele/`
 
@@ -111,4 +114,4 @@ npm test test/crypto/crypto_wallet.js
 
 - Testy se spouštějí **v pořadí** (mají sdílený state - tokeny, user data)
 - Response jsou logované do konzole pro debugging
-- Mock servery pro obě aplikace jsou externální (Beeceptor, httpbin, apod.)
+- Mock servery pro obě aplikace jsou externí (veřejné API)

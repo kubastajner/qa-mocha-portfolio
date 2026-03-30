@@ -6,8 +6,8 @@ const config = require('../../config/config');
 
 // Dotáhni vše z configu na začátku
 const { userName, email, password, cryptoWallet } = config;
-const baseURL = cryptoWallet;
 
+const baseURL = cryptoWallet;
 describe("Testování Crypto Wallet API", () => {
 
   // 1. REGISTRACE - Vytvořit uživatele a peněženku
